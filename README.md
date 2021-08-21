@@ -14,12 +14,12 @@ docker push lmiao/dev-env:ubuntu-cpp
 
 ## Build Docker Image for ML with C++
 ```
-docker build -t lmiao/dev-env:ubuntu-cpp-ml-cpu - < Dockerfile.c++ml.cpu
-docker push lmiao/dev-env:ubuntu-cpp-ml-cpu
+docker build -t lmiao/dev-env:ubuntu-cpp-ml-cpu-x86_64 - < Dockerfile.c++ml.cpu.x86_64
+docker push lmiao/dev-env:ubuntu-cpp-ml-cpu-x86_64
 ```
 ```
-docker build -t lmiao/dev-env:ubuntu-cpp-ml-gpu - < Dockerfile.c++ml.gpu
-docker push lmiao/dev-env:ubuntu-cpp-ml-gpu
+docker build -t lmiao/dev-env:ubuntu-cpp-ml-gpu-x86_64 - < Dockerfile.c++ml.gpu.x86_64
+docker push lmiao/dev-env:ubuntu-cpp-ml-gpu-x86_64
 ```
 
 ## Run container
