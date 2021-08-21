@@ -33,6 +33,7 @@ ifconfig
 
 ## Jupyter
 * https://github.com/jupyter-xeus/xeus
+* https://github.com/jupyter-xeus/xeus-cling
 ```
 . /opt/miniconda/bin/activate
 conda create -y -n cpp-ml
