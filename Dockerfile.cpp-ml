@@ -4,6 +4,10 @@ FROM lmiao/dev-env:ubuntu-cpp
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda.sh && \
     bash ~/miniconda.sh -b -p /opt/miniconda && \
     rm -f ~/miniconda.sh
+    
+    
+# https://github.com/jupyter-xeus/xeus
+RUN /opt/miniconda/bin/conda install -q -y xeus -c conda-forge
 
 # USER docker
 CMD /bin/bash
