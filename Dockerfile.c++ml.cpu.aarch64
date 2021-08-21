@@ -199,7 +199,7 @@ ENV MKLROOT="/opt/intel/mkl"
 # Setup and build flashlight
 RUN mkdir /root/flashlight
 
-COPY . /root/flashlight
+RUN cd /root && git clone --depth 1 https://github.com/flashlight/flashlight.git
 
 RUN cd /root/flashlight && mkdir -p build && \
     cd build && cmake .. -DCMAKE_BUILD_TYPE=Release \
@@ -208,7 +208,8 @@ RUN cd /root/flashlight && mkdir -p build && \
                          -DFL_BACKEND=CPU \
                          -DGloo_DIR=/opt/gloo/share/cmake \
                          -DDNNL_DIR=/opt/onednn/lib/cmake/dnnl && \
-    make install -j$(nproc)
+    make install -j$(nproc) && \
+    rm -rf /root/flashlight
 
 
 # USER docker
