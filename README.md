@@ -24,6 +24,11 @@ docker run -it --name dev-env-cpp-ml -p 8888:8888 lmiao/dev-env:ubuntu-cpp-ml /b
 . /opt/miniconda/bin/activate
 jupyter-lab --no-browser
 ```
+* in case network debug is needed
+```
+sudo apt install net-tools
+ifconfig
+```
 
 ## Jupyter
 * https://github.com/jupyter-xeus/xeus
