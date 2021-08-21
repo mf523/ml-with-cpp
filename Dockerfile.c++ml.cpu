@@ -185,7 +185,7 @@ ENV KENLM_ROOT=/opt/kenlm
 # flashlight       master     (git, CPU backend)
 # ==================================================================
 
-FROM flml/flashlight:cpu-base-consolidation-latest
+# FROM flml/flashlight:cpu-base-consolidation-latest
 
 # just in case for visibility
 ENV MKLROOT="/opt/intel/mkl"
