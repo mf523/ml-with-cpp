@@ -8,13 +8,13 @@
 sudo apt-get install git wget
 git clone https://github.com/mf523/ml-with-cpp.git ml-with-cpp.git
 cd ml-with-cpp.git
-docker build -t lmiao/dev-env:ubuntu-cpp - < Dockerfile.cpp
+docker build -t lmiao/dev-env:ubuntu-cpp - < Dockerfile.c++
 docker push lmiao/dev-env:ubuntu-cpp
 ```
 
 ## Build Docker Image for ML with C++
 ```
-docker build -t lmiao/dev-env:ubuntu-cpp-ml - < Dockerfile.cpp-ml
+docker build -t lmiao/dev-env:ubuntu-cpp-ml - < Dockerfile.c++ml
 docker push lmiao/dev-env:ubuntu-cpp-ml
 ```
 ## Jupyter
