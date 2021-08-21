@@ -39,6 +39,7 @@ conda create -y -n cpp-ml
 conda activate cpp-ml
 conda install -c conda-forge -q -y jupyterlab
 conda install -c conda-forge -q -y xeus
+conda install -c conda-forge -q -y xeus-cling
 jupyter-lab --no-browser --ip 0.0.0.0 --port 80
 ```
 
