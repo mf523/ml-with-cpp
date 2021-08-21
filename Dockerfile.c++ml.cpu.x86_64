@@ -199,7 +199,7 @@ ENV MKLROOT="/opt/intel/mkl"
 # Setup and build flashlight
 RUN mkdir /root/flashlight
 
-RUN cd /tmp && git clone --branch v2.0 --depth 1 https://github.com/flashlight/flashlight.git
+RUN cd /tmp && git clone --depth 1 https://github.com/flashlight/flashlight.git
 
 COPY /tmp/flashlight/* /root/flashlight
 
