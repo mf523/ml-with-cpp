@@ -1,18 +1,5 @@
 FROM lmiao/dev-env:ubuntu-cpp as cpu_base_builder
 
-# https://docs.conda.io/en/latest/miniconda.html
-RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda.sh && \
-    bash ~/miniconda.sh -b -p /opt/miniconda && \
-    rm -f ~/miniconda.sh
-    
-    
-# https://github.com/jupyter-xeus/xeus
-RUN /opt/miniconda/bin/conda install -c conda-forge -q -y jupyterlab && \
-    /opt/miniconda/bin/conda install -c conda-forge -q -y xeus && \
-    /opt/miniconda/bin/conda install -c conda-forge -q -y xeus-cling
-    
-    
-
 # https://github.com/flashlight/flashlight/tree/master/.docker
 
 
@@ -212,5 +199,18 @@ RUN cd /root/flashlight && mkdir -p build && \
     rm -rf /root/flashlight
 
 
+
+# https://docs.conda.io/en/latest/miniconda.html
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda.sh && \
+    bash ~/miniconda.sh -b -p /opt/miniconda && \
+    rm -f ~/miniconda.sh
+    
+    
+# https://github.com/jupyter-xeus/xeus
+RUN /opt/miniconda/bin/conda install -c conda-forge -q -y jupyterlab && \
+    /opt/miniconda/bin/conda install -c conda-forge -q -y xeus && \
+    /opt/miniconda/bin/conda install -c conda-forge -q -y xeus-cling
+    
+    
 # USER docker
 CMD /bin/bash
