@@ -1,4 +1,4 @@
-FROM lmiao/dev-env:ubuntu-cpp
+FROM lmiao/dev-env:ubuntu-cpp as cuda_base_builder
 
 # https://docs.conda.io/en/latest/miniconda.html
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda.sh && \
@@ -31,7 +31,7 @@ RUN /opt/miniconda/bin/conda install -c conda-forge -q -y jupyterlab && \
 # python3          latest       (apt)
 # ==================================================================
 
-FROM nvidia/cuda:11.1-cudnn8-devel-ubuntu20.04 as cuda_base_builder
+# FROM nvidia/cuda:11.1-cudnn8-devel-ubuntu20.04 as cuda_base_builder
 
 # If the driver is not found (during docker build) the cuda driver api need to be linked against the
 # libcuda.so stub located in the lib[64]/stubs directory
@@ -164,7 +164,7 @@ ENV KENLM_ROOT=/opt/kenlm
 # flashlight       master     (git, CUDA backend)
 # ==================================================================
 
-FROM flml/flashlight:cuda-base-consolidation-latest
+# FROM flml/flashlight:cuda-base-consolidation-latest
 
 # just in case for visibility
 ENV MKLROOT="/opt/intel/mkl"
