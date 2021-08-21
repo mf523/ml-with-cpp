@@ -22,7 +22,8 @@ docker push lmiao/dev-env:ubuntu-cpp-ml
 ```
 docker run -it --name dev-env-cpp-ml -p 8888:8888 lmiao/dev-env:ubuntu-cpp-ml /bin/sh
 . /opt/miniconda/bin/activate
-jupyter-lab --no-browser
+# only work with ip 0.0.0.0 and port 80 with MacOSX(11.5.2 M1)
+jupyter-lab --no-browser --ip 0.0.0.0 --port 80
 ```
 * in case network debug is needed
 ```
