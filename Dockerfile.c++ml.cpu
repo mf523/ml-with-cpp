@@ -1,4 +1,4 @@
-FROM lmiao/dev-env:ubuntu-cpp
+FROM lmiao/dev-env:ubuntu-cpp as cpu_base_builder
 
 # https://docs.conda.io/en/latest/miniconda.html
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda.sh && \
