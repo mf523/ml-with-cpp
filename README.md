@@ -17,6 +17,14 @@ docker push lmiao/dev-env:ubuntu-cpp
 docker build -t lmiao/dev-env:ubuntu-cpp-ml - < Dockerfile.c++ml
 docker push lmiao/dev-env:ubuntu-cpp-ml
 ```
+
+## Run container
+```
+docker run -it --name dev-env-cpp-ml -p 8888:8888 lmiao/dev-env:ubuntu-cpp-ml /bin/sh
+. /opt/miniconda/bin/activate
+jupyter-lab --no-browser
+```
+
 ## Jupyter
 * https://github.com/jupyter-xeus/xeus
 ```
