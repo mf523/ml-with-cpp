@@ -13,7 +13,6 @@ docker push lmiao/dev-env:ubuntu-cpp
 ```
 
 ## Build Docker Image for ML with C++
-* https://docs.conda.io/en/latest/miniconda.html
 ```
 docker build -t lmiao/dev-env:ubuntu-cpp-ml - < Dockerfile.cpp-ml
 docker push lmiao/dev-env:ubuntu-cpp-ml
