@@ -19,5 +19,13 @@ docker push lmiao/dev-env:ubuntu-cpp-ml
 ```
 ## Jupyter
 * https://github.com/jupyter-xeus/xeus
+```
+. /opt/miniconda/bin/activate
+conda create -y -n cpp-ml
+conda activate cpp-ml
+conda install -c conda-forge -q -y jupyterlab
+conda install -c conda-forge -q -y xeus
+jupyter-lab --no-browser
+```
 
 
