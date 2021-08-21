@@ -12,7 +12,9 @@ RUN /opt/miniconda/bin/conda install -c conda-forge -q -y jupyterlab && \
     /opt/miniconda/bin/conda install -c conda-forge -q -y xeus-cling
     
     
-    
+# https://github.com/flashlight/flashlight/tree/master/.docker
+
+
 # ==================================================================
 # module list
 # ------------------------------------------------------------------
