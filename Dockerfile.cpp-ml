@@ -1,0 +1,8 @@
+FROM lmiao/dev-env:ubuntu-cpp
+
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh -O ~/miniconda.sh && \
+    bash ~/miniconda.sh -b -p /opt/miniconda && \
+    rm -f ~/miniconda.sh
+
+# USER docker
+CMD /bin/bash
