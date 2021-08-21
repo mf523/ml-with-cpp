@@ -1,6 +1,11 @@
 # FROM lmiao/dev-env:ubuntu-cpp
 FROM nvidia/cuda:11.1-cudnn8-devel-ubuntu20.04 as cuda_base_builder
 
+RUN apt-get -y dist-upgrade && \
+    apt-get -y update && \
+    apt-get -y install sudo wget vim curl
+    
+
 # https://docs.conda.io/en/latest/miniconda.html
 RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh && \
     bash ~/miniconda.sh -b -p /opt/miniconda && \
