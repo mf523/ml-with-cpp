@@ -7,14 +7,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install git gcc g++ cmake
 
 RUN apt-get -y install libboost-all-dev libjsoncpp-dev uuid-dev openssl libssl-dev zlib1g-dev
 
-# drogon framework
-RUN mkdir -p /tmp/build; cd /tmp/build && \
-    git clone https://github.com/an-tao/drogon; cd drogon && \
-    git submodule update --init && \
-    mkdir build; cd build && \
-    cmake .. && \
-    make && sudo make install && \
-    rm -rf /tmp/build
-
 # USER docker
 CMD /bin/bash
