@@ -10,6 +10,7 @@ git clone https://github.com/mf523/ml-with-cpp.git ml-with-cpp.git
 cd ml-with-cpp.git
 docker build -t lmiao/dev-env:ubuntu-cpp - < Dockerfile.c++
 docker push lmiao/dev-env:ubuntu-cpp
+#docker run -it --name dev-env-cpp -p 8899:8888 -v "$(pwd)":/mnt lmiao/dev-env:ubuntu-cpp /bin/sh
 ```
 
 ## Build Docker Image for ML with C++
