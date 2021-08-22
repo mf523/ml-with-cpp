@@ -29,7 +29,7 @@ docker push lmiao/dev-env:ubuntu-cpp-ml-gpu-x86_64
 ## Run container
 ```
 # only work with ip 0.0.0.0 and port 80 with MacOSX(11.5.2 M1)
-docker run -it --name dev-env-cpp-ml -p 8899:8888 lmiao/dev-env:ubuntu-cpp-ml-cpu-x86_64 /bin/sh
+docker run -it --name dev-env-cpp-ml -p 8899:8888 -v "$(pwd)":/mnt lmiao/dev-env:ubuntu-cpp-ml-cpu-x86_64 /bin/sh
 . /opt/miniconda/bin/activate
 jupyter-lab --no-browser --ip 0.0.0.0 --port 8888
 ```
