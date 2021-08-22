@@ -13,7 +13,8 @@ RUN mkdir -p /tmp/build; cd /tmp/build && \
     git submodule update --init && \
     mkdir build; cd build && \
     cmake .. && \
-    make && sudo make install
+    make && sudo make install && \
+    rm -rf /tmp/build
 
 # USER docker
 CMD /bin/bash
